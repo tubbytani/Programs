@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int q[5],p,temp;
+    int i,j,k;
+	printf("enter 10 numbers \n");
+	for(i=0;i<5;i++)
+	{scanf("%d",&q[i]);}
+	for(j=(i+1);j<5;j++)
+	{
+	if(q[j]>q[i])
+	{  
+	    temp=q[i+1];
+	    q[i]=q[i+1];
+	    q[i+1]=temp;
+	}
+	printf("the sorted numbers in descending order are:");
+	for(k=0;k<5;k++)
+	printf("%d",q[k]);
+    return 0;
+}
