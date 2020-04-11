@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include<math.h>
 int main()
@@ -6,17 +7,18 @@ int main()
     int i,j,k;
 	printf("enter 10 numbers \n");
 	for(i=0;i<5;i++)
-	{scanf("%d",&q[i]);}
+	scanf("%d",&q[i]);
 	for(j=(i+1);j<5;j++)
 	{
 	if(q[j]>q[i])
 	{  
-	    temp=q[i+1];
-	    q[i]=q[i+1];
-	    q[i+1]=temp;
+	    temp=q[i];
+	    q[i]=q[j];
+	    q[j]=temp;
+	}
 	}
 	printf("the sorted numbers in descending order are:");
-	for(k=0;k<5;k++)
-	printf("%d",q[k]);
+	for(i=0;i<5;i++)
+	{printf("%d",q[i]);}
     return 0;
 }
